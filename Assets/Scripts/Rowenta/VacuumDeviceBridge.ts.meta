@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/835ee33c-2610-4fd6-b4eb-64d8f9b4a715>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a9934bc9-f1bd-4192-8924-fe09a2046161
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a9934bc9-f1bd-4192-8924-fe09a2046161
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> db09efcc-ebd0-43d7-aed9-e75e3e7d6870
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/db09efcc-ebd0-43d7-aed9-e75e3e7d6870>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: eae27273-b32b-4358-9cf7-a9c468048ac7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bridgeEndpointUrl: false
+    statusPollSeconds: false
+    useSimulation: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - useSimulation: true
+      bridgeEndpointUrl: ""
+      statusPollSeconds: !<float> 3.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#38BDF8;\">Rowenta Serie 50 — device bridge</span>"}'
+    - '// @input bool useSimulation {"hint":"ON = fake robot in-Lens. OFF = talk to Mac bridge → real Tuya vacuum"}'
+    - '// @input string bridgeEndpointUrl = "http://127.0.0.1:8787" {"hint":"Bridge base URL (Preview: http://127.0.0.1:8787 — Specs: http://YOUR_MAC_LAN_IP:8787)"}'
+    - '// @input float statusPollSeconds = 3 {"hint":"Poll /state every N seconds while connected (0 = off)"}'

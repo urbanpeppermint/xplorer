@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/4e03d56b-d660-4d10-9324-d9ca4fbbfbb6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 29cfc167-391c-4be5-bca4-ba132cf52af2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 29cfc167-391c-4be5-bca4-ba132cf52af2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 832076f6-63e0-4aa7-bf46-fbea2d0ca3b6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/832076f6-63e0-4aa7-bf46-fbea2d0ca3b6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8ed6bcaf-894e-45ab-aaa6-3de832b934ef
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bridgeHost: false
+    glowMaterial: false
+    hudDistanceCm: false
+    hudFont: false
+    hudScale: false
+    roomScan: false
+    scheduleArmed: false
+    scheduleLabel: false
+    scheduleWhen: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - glowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      hudFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      bridgeHost: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      hudDistanceCm: !<float> 55.000000
+      hudScale: !<float> 1.000000
+      scheduleWhen: "TOMORROW 13:50"
+      scheduleLabel: PROGRAMMA
+      scheduleArmed: true
+      roomScan: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#38BDF8;\">Rowenta helmet visor — head-locked illuminated HUD</span>"}'
+    - '// @input Asset.Material glowMaterial {"hint":"Unlit material HudGlowLive. The script switches it to additive glow. Do not assign an empty material."}'
+    - '// @input Asset.Font hudFont {"hint":"Materials/HudTerminalFont.ttf — terminal face for every readout"}'
+    - '// @input AssignableType_1 bridgeHost {"hint":"VacuumDeviceBridge driving the live robot state. Found automatically if empty."}'
+    - '// @input float hudDistanceCm = 55 {"hint":"Distance from the eyes to the HUD plane, in cm. Angular layout is preserved."}'
+    - '// @input float hudScale = 1 {"hint":"Overall HUD scale multiplier. Lower it if the chrome falls outside the Specs FOV."}'
+    - '// @input string scheduleWhen = "TOMORROW 13:50" {"hint":"Scheduled program window shown on the visor, e.g. TOMORROW 13:50"}'
+    - '// @input string scheduleLabel = "PROGRAMMA" {"hint":"Scheduled program name from the Robots app"}'
+    - '// @input bool scheduleArmed = true {"hint":"Light the schedule chip. Off shows NO PROGRAM ARMED."}'
+    - '// @input AssignableType_2 roomScan {"hint":"Room scan. Found automatically if empty. Scan and Clear live on the visor."}'

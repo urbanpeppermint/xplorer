@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/1dff170a-89dc-4acc-85a7-9c9c7784e962>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 523d02dd-5957-4e12-9273-2c398f3a4a3a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 523d02dd-5957-4e12-9273-2c398f3a4a3a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e7cdf5d4-0183-49ce-b4c3-0cb6bed7dc5d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e7cdf5d4-0183-49ce-b4c3-0cb6bed7dc5d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: b1f71b27-40ae-44e6-a672-9e27623a12b2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrController: false
+    bridgeHost: false
+    dockWords: false
+    enableLogging: false
+    startWords: false
+    stopWords: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bridgeHost: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      asrController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      startWords: "eat this, start, go, follow, vacuum, come here"
+      dockWords: "dock, go home, charge, recharge"
+      stopWords: "stop, off, cancel, halt"
+      enableLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#38BDF8;\">Voice → Rowenta commands (CLAD demo)</span>"}'
+    - // @input AssignableType_1 bridgeHost
+    - '// @input Component.ScriptComponent asrController {"hint":"Drag VoiceInput here. The ASRQueryController on that object is used."}'
+    - '// @input string startWords = "eat this, start, go, follow, vacuum, come here" {"hint":"Words that start cleaning. Comma-separated. Change these in the Inspector, then restart Preview."}'
+    - '// @input string dockWords = "dock, go home, charge, recharge" {"hint":"Words that send the robot to the dock. Comma-separated."}'
+    - '// @input string stopWords = "stop, off, cancel, halt" {"hint":"Words that turn the robot off. Comma-separated. Checked before start words."}'
+    - // @input bool enableLogging = true

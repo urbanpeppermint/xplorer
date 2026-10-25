@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/122b2743-ec3e-4b44-b902-9288a0e8c01d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c0f72533-cc4a-44ac-bc1f-21dc914a601a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c0f72533-cc4a-44ac-bc1f-21dc914a601a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e6edce7d-76c1-4c9d-a42d-8cea26fe8d85
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e6edce7d-76c1-4c9d-a42d-8cea26fe8d85>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 16a88998-3417-4dbe-be10-94d81f97b1d0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableLogging: false
+    filterEnabled: false
+    maxSamples: false
+    previewMarker: false
+    sampleTemplate: false
+    samplesRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - previewMarker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      samplesRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sampleTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      filterEnabled: true
+      maxSamples: !<float> 64.000000
+      enableLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color:#38BDF8;\">Room scan (Specs World Query)</span>"}'
+    - '// @input SceneObject previewMarker {"hint":"Preview marker that follows the hit surface while pointing"}'
+    - '// @input SceneObject samplesRoot {"hint":"Parent for committed floor samples"}'
+    - '// @input SceneObject sampleTemplate {"hint":"Prefab / template object cloned at each committed sample"}'
+    - // @input bool filterEnabled = true
+    - // @input float maxSamples = 64
+    - // @input bool enableLogging = true

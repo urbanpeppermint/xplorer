@@ -1,0 +1,36 @@
+{
+  "listen_host": "0.0.0.0",
+  "listen_port": 8787,
+  "protocol_version": 3.3,
+  "comment": "Fill device fields after pairing the RR7387 in Rowenta Robots / Tuya Smart and running: python -m tinytuya wizard",
+  "device_id": "REPLACE_WITH_TUYA_DEVICE_ID",
+  "device_ip": "REPLACE_WITH_ROBOT_LAN_IP",
+  "local_key": "REPLACE_WITH_LOCAL_KEY",
+  "tuya_cloud": {
+    "enabled": false,
+    "api_key": "",
+    "api_secret": "",
+    "region": "eu"
+  },
+  "dp_map": {
+    "comment": "Serie 50 usually follows Tuya robot-vacuum (sd) codes. Adjust after GET /discover.",
+    "switch_go": "switch_go",
+    "pause": "pause",
+    "switch_charge": "switch_charge",
+    "mode": "mode",
+    "suction": "suction",
+    "seek": "seek",
+    "battery": "battery_percentage",
+    "status": "status"
+  },
+  "mode_values": {
+    "Methodic": "smart",
+    "Spot": "spiral",
+    "WallFollow": "wall_follow"
+  },
+  "power_values": {
+    "Eco": "quiet",
+    "Normal": "normal",
+    "Boost": "strong"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "listen_host": "0.0.0.0",
+  "listen_port": 8788,
+  "method": "GET",
+  "timeout_seconds": 6,
+  "modelId": "RR7387WH",
+  "_comment": "Paste VoiceMonkey v3 trigger URLs. device= is the ID on the VoiceMonkey card, not the display name. StartClean is only our relay label. Keep this file out of git.",
+  "webhooks": {
+    "StartClean": "https://api-v3.voicemonkey.io/trigger?token=YOUR_TOKEN&device=YOUR_DEVICE_ID",
+    "ReturnToDock": "",
+    "Pause": "",
+    "Stop": "",
+    "SetPower:Boost": ""
+  }
+}

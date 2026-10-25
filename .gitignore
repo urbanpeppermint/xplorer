@@ -1,0 +1,44 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+ls-live-instance.json
+ls-live-instance.json.tmp
+# END Lens Studio managed Agents-Docs block
+
+# Rowenta bridge secrets / local env
+bridge/config.json
+bridge/alexa_config.json
+bridge/.venv/
+bridge/devices.json
+bridge/tuya-raw.json
+bridge/tinytuya.json
+bridge/snapshot.json
+bridge/relay.log
+bridge/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Local editor state and generated caches
+Cache/
+Workspaces/
+PluginsUserPreferences/
+.virtual-scene.json
+tempAssetGen/
+.cursor/
+.claude/
+.codex/
+.clad/
+
+# Private keys
+spk_debug_key.pem
+**/*.pem
+
+# Rowenta's own manuals and app captures. Not our work.
+ROWENTA-*.pdf
+ROWENTA_*.pdf
+ROWENTA_APP_PREVIEW-*.webp
+Assets/Docs/
+
