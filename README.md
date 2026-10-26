@@ -1,12 +1,12 @@
 # Xplorer
 
-**Wear Spectacles. Run a vacuum you already own.**
+**The most unique AR glasses, talking to a vacuum that never heard of AR.**
 
-[Spectacles](https://www.spectacles.com/) is the most distinctive AR glasses platform available — a spatial computer on your face, with hands, voice, and a display that moves with you. Spectacles 2024 already showed how far that can go. Nothing else works like it.
+[Spectacles](https://www.spectacles.com/) remains in a class of its own: a full spatial computer on your face — hands, voice, a head-locked display, and a loop that lets you build for the room you are standing in. No other AR glasses ship that combination. Spectacles 2024 already made the case.
 
-**Xplorer** is a Spectacles lens that starts, docks, and stops a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`): a first-generation, mid-range robot vacuum. The glasses are state of the art. The robot is not. That gap is intentional. You should not need the newest appliance for the newest wearable to be useful.
+Xplorer is what happens when that platform meets a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`): a first-generation, mid-range robot vacuum with no special firmware and no premium kit. The glasses start it, dock it, and stop it. The point is not that the robot is new. It is that hardware this capable should adopt the devices people already own.
 
-Build for the home you have. Prototype on Spectacles. Leave the vacuum on the dock until you say otherwise.
+The future of this computer is not a new gadget for every room. It is a wearable you can prototype on, aimed at the house you already live in.
 
 ## The idea
 
