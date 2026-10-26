@@ -1,14 +1,12 @@
 # Xplorer
 
-**Spectacles controlling a robot that never heard of AR.**
+**Spectacles, on a robot vacuum that never expected them.**
 
-[Spectacles](https://www.spectacles.com/) is not another pair of AR glasses. Nothing else puts a full spatial computer on your face the way this platform does: hands, voice, a head-locked display, and a development loop that lets you build for the room you are standing in. Spectacles 2024 already proved that. There is still no peer for that kind of wearable.
+[Spectacles](https://www.spectacles.com/) is in a class of its own. No other AR glasses put a spatial computer on your face with this depth of interaction and this freedom to build for the room you are already in. Spectacles 2024 made that clear — and nothing since has replaced it.
 
-Xplorer shows what that means when you stop chasing the newest appliance.
+Xplorer is what happens when that platform meets a machine that was never designed for it: a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`), a first-generation mid-range robot vacuum. The lens starts, docks, and stops the robot. No special firmware. No waiting for a “glasses-ready” model. The most capable wearable we have still belongs in a home that already works.
 
-This lens starts, docks, and stops a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`) — a first-generation, mid-range robot vacuum. No special firmware. No premium cloud kit. The glasses are among the most advanced wearables ever shipped. The robot is ordinary. That is the point: advanced hardware should adopt the devices people already own, not wait for the next SKU.
-
-The future of this computer is not a new gadget for every room. It is a wearable you can prototype on, aimed at the house you already live in.
+That is the future of this computer: not a new gadget for every room, but a wearable you can prototype on — aimed at the house you already live in.
 
 ## The idea
 
