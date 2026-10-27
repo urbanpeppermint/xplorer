@@ -2,11 +2,7 @@
 
 **Specs in the house you already live in.**
 
-[Specs](https://www.spectacles.com/) (Snap’s AR glasses; formerly Spectacles) is wearable spatial computing: you see the room, you use your hands, you speak, and you run software that was built for that moment. That alone is useful. What makes Specs the platform to build on is that it is also a **prototype computer** — a full development loop on your face, aimed at the world around you. With Specs on, the limit is the sky.
-
-Xplorer is one proof of that claim.
-
-It is a Specs lens that starts, docks, and stops a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`) — a first-generation, mid-range robot vacuum. No special firmware. No new appliance. The glasses are the newest kind of computer. The vacuum is ordinary. The point is adoption: take an old home device and give it a front door you can wear.
+[Specs](https://www.spectacles.com/) (Snap’s AR glasses; formerly Spectacles) is wearable spatial computing: you see the room, you use your hands, you speak, and you run software that was built for that moment. That alone is useful. What makes Specs the platform to build on is that it is also a **prototype computer** — a full development loop on your face, aimed at the world around you.
 
 ## Specs, then the house
 
