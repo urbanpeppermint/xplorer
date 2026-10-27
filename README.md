@@ -1,68 +1,57 @@
 # Xplorer
 
-**The most unique AR glasses, talking to a vacuum that never heard of AR.**
+**Specs in the house you already live in.**
 
-[Spectacles](https://www.spectacles.com/) remains in a class of its own: a full spatial computer on your face — hands, voice, a head-locked display, and a loop that lets you build for the room you are standing in. No other AR glasses ship that combination. Spectacles 2024 already made the case.
+[Specs](https://www.spectacles.com/) (Snap’s AR glasses; formerly Spectacles) is wearable spatial computing: you see the room, you use your hands, you speak, and you run software that was built for that moment. That alone is useful. What makes Specs the platform to build on is that it is also a **prototype computer** — a full development loop on your face, aimed at the world around you. With Specs on, the limit is the sky.
 
-Xplorer is what happens when that platform meets a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`): a first-generation, mid-range robot vacuum with no special firmware and no premium kit. The glasses start it, dock it, and stop it. The point is not that the robot is new. It is that hardware this capable should adopt the devices people already own.
+Xplorer is one proof of that claim.
 
-The future of this computer is not a new gadget for every room. It is a wearable you can prototype on, aimed at the house you already live in.
+It is a Specs lens that starts, docks, and stops a **Rowenta X-Plorer Serie 50** (`RR7387` / `RR7387WH`) — a first-generation, mid-range robot vacuum. No special firmware. No new appliance. The glasses are the newest kind of computer. The vacuum is ordinary. The point is adoption: take an old home device and give it a front door you can wear.
 
-## The idea
+## Specs, then the house
 
-Most smart-home demos assume the latest model and a native SDK. Xplorer assumes the opposite.
+Specs gives you the basics every spatial wearable needs — stereo view, hand tracking, voice, networking — and then the part that changes how you build: you can iterate a lens, put it on, and stand next to the thing you are controlling. That is not a phone demo. That is a workshop you carry.
 
-The Serie 50 already joins Wi‑Fi. It already obeys the Rowenta Robots app and Amazon Alexa. Spectacles already hears, tracks hands, and draws a display locked to your head. The product is the bridge between those two facts — a control surface you wear, for a machine that was never built for glasses.
+Most “smart home” projects wait for the latest SKU and a native SDK. Xplorer does the opposite. The Serie 50 already had Wi‑Fi, the Rowenta Robots app, and Amazon Alexa. It did **not** offer a usable Bluetooth control path for Specs. So we reverse-engineered the reachable stack: keep the OEM pairing, stay on Wi‑Fi, and drive the robot through the interface it already obeys — Alexa — triggered from the glasses by a small Mac relay and [VoiceMonkey](https://voicemonkey.io/).
 
-We are not chasing trends. We are making the devices we have work with the technology that just arrived.
+That is the thesis in one line. Specs does not need every appliance to be new. Specs needs a path. Once you have the path, an old vacuum is a smart-home endpoint.
 
-## What you wear
+## The lens
 
-The control panel is a cyborg-style helmet HUD, parented to the camera. It rides with the head the way a visor sits in front of the eyes — not a floating card in the room.
+A cyborg-style visor HUD rides with the user’s head. Pinch **START**, **DOCK**, or **STOP**, or say **follow me**, **dock**, or **stop**. The physical robot answers.
 
-On that plane:
+Also on the visor:
 
-- **START / DOCK / STOP**, plus room **SCAN / CLEAR**
-- voice coaching on the top line of the visor
-- battery, a gyro-style map, SMART / SPOT / WALL / FIND, Eco / Normal / Boost
-- a mic that opens with the lens, labeled **MIC**, with a ring that moves while it listens
-- a short laser tick when a control is pinched
+- voice coaching on the top line
+- battery, map, SMART / SPOT / WALL / FIND, Eco / Normal / Boost
+- **SCAN / CLEAR** for Specs World Query floor samples
+- a mic that opens with the lens, labeled **MIC**
 
-Say **follow me**, **dock**, or **stop**, or pinch the matching word. The physical robot answers.
-
-## How it works
-
-The Serie 50 has no Bluetooth control path we can use from Spectacles. That was never a blocker.
-
-Spectacles and the vacuum share the same Wi‑Fi. A small relay on a Mac takes an HTTP command from the glasses and fires an Amazon Alexa routine through [VoiceMonkey](https://voicemonkey.io/). Alexa already knows the X-Plorer. Rowenta’s cloud moves the robot.
+## How Specs reaches the robot
 
 ```text
-Spectacles  →  Mac relay (Wi‑Fi)  →  VoiceMonkey  →  Alexa  →  Rowenta  →  robot
+Specs  →  Mac relay (Wi‑Fi)  →  VoiceMonkey  →  Alexa  →  Rowenta cloud  →  robot
 ```
 
-Tokens stay on the computer. The lens only knows the Mac’s address. Full setup: [`bridge/ALEXA_SETUP.md`](bridge/ALEXA_SETUP.md).
+Tokens stay on the computer. The lens only knows the Mac’s address. Setup: [`bridge/ALEXA_SETUP.md`](bridge/ALEXA_SETUP.md). Live relay: `bridge/alexa_relay.py`.
 
-The free VoiceMonkey plan covers the three actions that matter:
-
-| Glasses | Robot |
+| Specs | Robot |
 |---|---|
 | start / follow me | starts cleaning |
 | dock / go home | returns to charge |
 | stop | powers off |
 
-Keywords are editable lists on `VacuumVoiceRouter` in Lens Studio. Local Tuya pairing is a dead end on this model and can orphan the vacuum — see [`INCIDENT_TUYA_PATH.md`](INCIDENT_TUYA_PATH.md). `bridge/server.py` is that archived attempt. The live path is `bridge/alexa_relay.py`.
+Keywords are editable on `VacuumVoiceRouter`. Do not re-pair this vacuum into Smart Life / Tuya IoT — that path can orphan the device ([`INCIDENT_TUYA_PATH.md`](INCIDENT_TUYA_PATH.md)).
 
 ## Stack
 
 | Layer | Choice |
 |---|---|
-| Wearable | Spectacles (Lens Studio, SIK, AsrModule, InternetModule, World Query) |
-| UI | Head-locked additive HUD (`HelmetHud`, `HudGlow`) |
-| Voice | Inspector keyword lists → vacuum commands |
+| Wearable | Specs — Lens Studio, SIK, AsrModule, InternetModule, World Query |
+| UI | Visor HUD (`HelmetHud`, `HudGlow`) |
+| Voice | Keyword lists → vacuum commands |
 | Network | Specs → Mac over Wi‑Fi (`POST /command`) |
-| Home | Alexa routines via VoiceMonkey → Rowenta cloud |
-
-Authoring stays where the tooling is strongest. The same scripts ship to Spectacles 2024. One codebase. The workshop and the glasses do not have to be the same generation.
+| Home | Alexa via VoiceMonkey → Rowenta |
 
 ## Run it
 
@@ -73,7 +62,9 @@ cp alexa_config.example.json alexa_config.json
 python3 alexa_relay.py
 ```
 
-On `VacuumDeviceBridge`: simulation off, endpoint `http://YOUR_MAC_LAN_IP:8788`, Experimental APIs on for plain `http://`. Push the lens. Leave the robot on the dock with a clear floor the first time.
+On `VacuumDeviceBridge`: simulation off, endpoint `http://YOUR_MAC_LAN_IP:8788`, Experimental APIs on for plain `http://`.
+
+**Push the Specs build last** — author and debug where the tooling is strongest, then ship the lens to Specs hardware for the on-device demo. Leave the robot on the dock with a clear floor the first time.
 
 ## Layout
 
@@ -89,4 +80,4 @@ INCIDENT_TUYA_PATH.md
 
 MIT. See [LICENSE](LICENSE).
 
-Rowenta, X-Plorer, Alexa, and Spectacles belong to their owners. Xplorer is an independent demonstration of wearing a control surface for a machine you already have.
+Rowenta, X-Plorer, Alexa, and Specs / Spectacles belong to their owners. Xplorer is an independent Specs demonstration of adopting the home you already have.
